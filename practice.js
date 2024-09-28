@@ -1,45 +1,34 @@
 function multiplyBiggerNumByTwo(num1, num2) {
-  let bigNum;
-  if (num1 > num2) {
-    bigNum = num1;
-    return bigNum * 2;
-  } else {
-    bigNum = num2;
-    return bigNum * 2;
-  }
+  let nums  = orderedValues(num1, num2); 
+  let bigNum = nums[0];
+  
+  return bigNum * 2;
 }
 
 function divideBiggerNumByThree(num1, num2) {
-  let bigNum;
-  if (num1 > num2) {
-    bigNum = num1;
-    return bigNum / 3;
-  } else {
-    bigNum = num2;
-    return bigNum / 3;
-  }
+  let nums  = orderedValues(num1, num2); 
+  let bigNum = nums[0];
+
+  return bigNum / 3;
+  
+}
+
+function orderedValues(num1, num2 ){
+  return num1 > num2 ? [num1, num2] : [num2, num1];
 }
 
 function eatMostTacos(sum1, sum2) {
-  let bigNum;
-  if (sum1 > sum2) {
-    bigNum = sum1;
-    return `I ate ${bigNum} tacos.`;
-  } else {
-    bigNum = sum2;
-    return `I ate ${bigNum} tacos.`;
-  }
+  let sums  = orderedValues(sum1, sum2); 
+  let bigNum = sums[0];
+
+  return `I ate ${bigNum} tacos.`;
 }
 
 function adoptSmallerDog(weight1, weight2) {
-  let smallDog;
-  if (weight1 < weight2) {
-    smallDog = weight1;
-    return `I adopted a dog that weighs ${smallDog} pounds.`;
-  } else {
-    smallDog = weight2;
-    return `I adopted a dog that weighs ${smallDog} pounds.`;
-  }
+  let dogs   = orderedValues(weight1, weight2); 
+  let smallDog = dogs[1];
+
+  return `I adopted a dog that weighs ${smallDog} pounds.`;
 }
 
 
